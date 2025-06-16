@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('<h1>Welcome to the backend of HealthTech Innovations</h1>');
+  res.end('<h1>HealthTech Innovations</h1>');
 });
 
 server.listen(3000, () => {
