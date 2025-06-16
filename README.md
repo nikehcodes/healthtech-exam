@@ -7,7 +7,7 @@ This is my submission for the AltSchool Tinyuka Second Semester Cloud Engineerin
 ### ✅ Project Information
 🔗 Live IP: https://healthtech.duckdns.org/
 
-🖼️ Screenshot:
+🖼️ Screenshot: 
 
 🧑‍💻 Author: Adefehinti Mary – ALT/SOE/024/2406
 
@@ -19,12 +19,11 @@ This is my submission for the AltSchool Tinyuka Second Semester Cloud Engineerin
 - Set up using **SSH key authentication**
 - Connected via terminal using:
   ```bash
-  ssh root@<droplet_ip>
+  ssh root@165.232.109.97
 ### 2. ✅ Installed Nginx
 -Updated packages:
 
 ```bash
-Copy code
 sudo apt update
 sudo apt install nginx -y
 ```
@@ -63,7 +62,48 @@ pm2 start app.js
 
 Set up proxy to forward to Node.js on port 3000.
 
-### 6. ✅ GitHub Integration
+### 6. 🌐 Domain Configuration with DuckDNS
+To make the deployed web application accessible using a custom domain instead of just the IP address, I used DuckDNS, a free and simple dynamic DNS service.
+
+Steps Taken:
+Visited duckdns.org
+
+Signed in using my GitHub account.
+
+Created a subdomain
+
+I chose a unique subdomain name, for example:
+healthtechproject.duckdns.org
+
+Linked the subdomain to my Droplet's public IP address
+
+I entered the IP address of my DigitalOcean droplet in the DuckDNS dashboard under that subdomain.
+
+Configured Nginx to use the domain
+
+I edited the Nginx configuration file:
+
+bash
+Copy
+Edit
+sudo nano /etc/nginx/sites-available/default
+I updated the server_name field to:
+
+nginx
+Copy
+Edit
+server_name healthtechproject.duckdns.org;
+Restarted Nginx to apply changes:
+
+bash
+Copy
+Edit
+sudo systemctl restart nginx
+✅ Now I can access my website via http://healthtechproject.duckdns.org
+
+
+
+### 7. ✅ GitHub Integration
 Initialized Git:
 
 ```bash
