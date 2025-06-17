@@ -15,7 +15,7 @@ This is my submission for the AltSchool Tinyuka Second Semester Cloud Engineerin
 ## 📌 Steps Completed
 
 ### 1. ✅ Created Droplet on DigitalOcean
--  **Ubuntu 20.04**
+-  **Ubuntu 22.04**
 - Set up using **SSH key authentication**
 - Connected via terminal using:
   ```bash
@@ -62,8 +62,8 @@ pm2 start app.js
 
 Set up proxy to forward to Node.js on port 3000.
 
-### 6. 🌐 Domain Configuration with DuckDNS
-To make the deployed web application accessible using a custom domain instead of just the IP address, I used DuckDNS, a free and simple dynamic DNS service.
+### 6. ✅ 🌐 Domain Configuration with DuckDNS
+To make the deployed web application accessible using a custom domain instead of just the IP address, I used DuckDNS, a free DNS service.
 
 Steps Taken:
 Visited duckdns.org
@@ -73,7 +73,7 @@ Signed in using my GitHub account.
 Created a subdomain
 
 I chose a unique subdomain name, for example:
-healthtechproject.duckdns.org
+healthtech.duckdns.org
 
 Linked the subdomain to my Droplet's public IP address
 
@@ -83,23 +83,18 @@ Configured Nginx to use the domain
 
 I edited the Nginx configuration file:
 
-bash
-Copy
-Edit
+```bash
 sudo nano /etc/nginx/sites-available/default
 I updated the server_name field to:
-
+```
 nginx
-Copy
-Edit
-server_name healthtechproject.duckdns.org;
+server_name healthtechp.duckdns.org;
 Restarted Nginx to apply changes:
 
-bash
-Copy
-Edit
+```bash
 sudo systemctl restart nginx
-✅ Now I can access my website via http://healthtechproject.duckdns.org
+```
+✅ Now I can access my website via http://healthtech.duckdns.org
 
 
 
