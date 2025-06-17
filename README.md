@@ -41,11 +41,7 @@ sudo ufw allow 'Nginx Full'
 ```
 
 -Visited:
-<<<<<<< HEAD
-http to confirm Nginx is running.
-=======
 http://165.232.109.97 to confirm Nginx is running.
->>>>>>> 05c7e42 (Update landing page and README)
 
 ### 3. ✅ Created Landing Page
 
@@ -54,13 +50,9 @@ http://165.232.109.97 to confirm Nginx is running.
 -Used Tailwind CSS via CDN for styling:
 html
 
-### 4. ✅ Node.js Setup (Optional Enhancement)
-<<<<<<< HEAD
--Created a Node.js app (app.js) to serve content.
-=======
+### 4. ✅ Node.js Setup 
 
-Created a Node.js app (app.js) to serve content.
->>>>>>> 05c7e42 (Update landing page and README)
+-Created a Node.js app (app.js) to serve content.
 
 -Installed Node and PM2:
 
@@ -91,12 +83,7 @@ Steps Taken:
 -Signed in using my GitHub account.
 
 -Created a subdomain
-
-<<<<<<< HEAD
--Selected a unique subdomain name,:
-=======
--Selected a unique subdomain name, for example:
->>>>>>> 05c7e42 (Update landing page and README)
+-Selected a unique subdomain name,
 healthtech.duckdns.org
 
 -Linked the subdomain to my Droplet's public IP address
@@ -104,32 +91,22 @@ healthtech.duckdns.org
 -Entered the IP address of my DigitalOcean droplet in the DuckDNS dashboard under that subdomain.
 
 -Configured Nginx to use the domain
-
-<<<<<<< HEAD
-Edited the Nginx configuration file:
-=======
 -Edited the Nginx configuration file:
->>>>>>> 05c7e42 (Update landing page and README)
 
 ```bash
 sudo nano /etc/nginx/sites-available/default
 
 ```
-<<<<<<< HEAD
-nginx
-server_name healthtech.duckdns.org;
-=======
 
--I updated the server_name field to:
+-Updated the server_name field to:
 nginx server_name healthtech.duckdns.org;
->>>>>>> 05c7e42 (Update landing page and README)
 -Restarted Nginx to apply changes:
 
 ```bash
 sudo systemctl restart nginx
 ```
 
-✅ Now I can access my website via http://healthtech.duckdns.org
+✅ Website accesible via http://healthtech.duckdns.org
 
 ### 7. ✅ GitHub Integration
 
