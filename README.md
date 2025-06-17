@@ -1,6 +1,7 @@
 # 🚀 HealthTech Landing Page – Cloud Deployment (DigitalOcean)
 
-This is my submission for the AltSchool Tinyuka Second Semester Cloud Engineering exam. It showcases a deployed landing page for a HealthTech startup on a **DigitalOcean Droplet**, with Nginx and GitHub integration.
+This is my submission for the AltSchool Tinyuka Second Semester Cloud Engineering exam. 
+It showcases a deployed landing page for a HealthTech startup on a **DigitalOcean Droplet**, with Nginx and GitHub integration.
 
 ---
 
@@ -34,7 +35,7 @@ sudo ufw allow 'Nginx Full'
 ```
 
 -Visited:
-http://https://healthtech.duckdns.org/ to confirm Nginx is running.
+http to confirm Nginx is running.
 
 ### 3. ✅ Created Landing Page
 -Created HTML file at:
@@ -43,9 +44,9 @@ http://https://healthtech.duckdns.org/ to confirm Nginx is running.
 html
 
 ### 4. ✅ Node.js Setup (Optional Enhancement)
-Created a Node.js app (app.js) to serve content.
+-Created a Node.js app (app.js) to serve content.
 
-Installed Node and PM2:
+-Installed Node and PM2:
 
 ```bash
 sudo apt install nodejs npm -y
@@ -60,36 +61,36 @@ pm2 start app.js
 -Edited config:
 /etc/nginx/sites-available/healthtech
 
-Set up proxy to forward to Node.js on port 3000.
+-Set up proxy to forward to Node.js on port 3000.
 
 ### 6. ✅ 🌐 Domain Configuration with DuckDNS
 To make the deployed web application accessible using a custom domain instead of just the IP address, I used DuckDNS, a free DNS service.
 
 Steps Taken:
-Visited duckdns.org
+-Visited duckdns.org
 
-Signed in using my GitHub account.
+-Signed in using my GitHub account.
 
-Created a subdomain
+-Created a subdomain
 
-I chose a unique subdomain name, for example:
+-Selected a unique subdomain name,:
 healthtech.duckdns.org
 
-Linked the subdomain to my Droplet's public IP address
+-Linked the subdomain to my Droplet's public IP address
 
-I entered the IP address of my DigitalOcean droplet in the DuckDNS dashboard under that subdomain.
+-Entered the IP address of my DigitalOcean droplet in the DuckDNS dashboard under that subdomain.
 
-Configured Nginx to use the domain
+-Configured Nginx to use the domain
 
-I edited the Nginx configuration file:
+Edited the Nginx configuration file:
 
 ```bash
 sudo nano /etc/nginx/sites-available/default
 I updated the server_name field to:
 ```
 nginx
-server_name healthtechp.duckdns.org;
-Restarted Nginx to apply changes:
+server_name healthtech.duckdns.org;
+-Restarted Nginx to apply changes:
 
 ```bash
 sudo systemctl restart nginx
